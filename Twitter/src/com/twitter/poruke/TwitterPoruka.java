@@ -23,6 +23,11 @@ public class TwitterPoruka {
 	/**
 	 * Javna metoda setKorisnik kojom se dodeljuje odredjena vrednost atributu korisnik.
 	 * @param korisnik Ovo je ulazni parametar.
+	 * @throws java.lang.RuntimeException Ako je uneti korisnik:
+	 * <ul>
+	 * 	<li>null,</li>
+	 * 	<li>prazan String.</li>
+	 * </ul>
 	 */
 	public void setKorisnik(String korisnik) {
 		if (korisnik == null || korisnik == "") {
@@ -35,14 +40,19 @@ public class TwitterPoruka {
 	 * @return poruka Ovo je povratna vrednost metode getPoruka.
 	 */
 	public String getPoruka() {
-		return "poruka";
+		return poruka;
 	}
 	/**
 	 * Javna metoda setPoruka kojom se dodeljuje odredjena vrednost atributu poruka.
 	 * @param poruka Ulazni parametar ove metode.
+	 * @throws java.lang.RuntimeException Ako je uneta poruka:
+	 * <ul>
+	 * 	<li>null,</li>
+	 * 	<li>duza od 140 karaktera.</li>
+	 * </ul>
 	 */
 	public void setPoruka(String poruka) {
-		if (poruka == null || this.poruka.length() > 140) {
+		if (poruka == null || poruka.length() > 140) {
 			throw new RuntimeException("Poruka mora biti uneta i mora imati najvise 140 znakova");
 		}
 		this.poruka = poruka;

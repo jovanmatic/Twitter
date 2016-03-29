@@ -2,7 +2,7 @@ package com.twitter.poruke;
 /**
  * Ovo je javna klasa TwitterPoruka. Sadrzi podatke o korisniku i poruci!
  * @author Asus
- * @version Verzija klase je 1.0
+ * @version 1.0
  */
 public class TwitterPoruka {
 	/**
